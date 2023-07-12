@@ -26,9 +26,8 @@ class Caixa {
 
         if (!listaProdutos.isEmpty()) {
             println("=====PRODUTOS CADASTRADOS=====")
-            listaProdutos.forEach {
-                println("\nNome: ${it.getNome()}\nValor: R$ ${it.getValor()}\nQuantidade: ${it.getQuantidade()}")
-                println("-------------------")
+            listaProdutos.forEach { println("\nNome: ${it.getNome()}\nValor: R$ ${it.getValor()}\nQuantidade: ${it.getQuantidade()}")
+                println()
         }
         }else {
             println("Não foi cadastrado nenhum produto na lista")

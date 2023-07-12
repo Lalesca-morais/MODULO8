@@ -28,6 +28,7 @@ fun main(){
 
             val media = aluno.calculoMediaSemestral()
             println("Média semestral: $media")
+
         } catch (e: IllegalArgumentException) {
             println(e.message)
             continue
@@ -37,6 +38,7 @@ fun main(){
         do {
             println("Novo cálculo (1 - Sim  2 - Não)?")
             novoCalculo = scanner.nextInt()
+
         } while (novoCalculo != 1 && novoCalculo != 2)
 
         continuar = novoCalculo == 1

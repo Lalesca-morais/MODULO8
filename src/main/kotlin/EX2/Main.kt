@@ -17,5 +17,6 @@ fun main() {
     isaacNewton.calculaIdade(dataHoje.dayOfMonth, dataHoje.monthValue, dataHoje.year)
 
     println("${albertEinstein.informaNome()}: ${albertEinstein.informaIdade()} anos")
+    println()
     println("${isaacNewton.informaNome()}: ${isaacNewton.informaIdade()} anos")
 }

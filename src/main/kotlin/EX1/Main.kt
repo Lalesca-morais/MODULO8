@@ -6,11 +6,17 @@ fun main() {
     val caixa = Caixa()
     val scanner = Scanner(System.`in`)
 
-    val item1 = Produto("Arroz", 1.99, 2)
-    val item2 = Produto("Feijão", 2.99, 1)
-    val item3 = Produto("Macarrão", 3.99, 2)
-    val item4 = Produto("Óleo", 4.99, 3)
-    val item5 = Produto("Açúcar", 5.99, 1)
+    val item1 = Produto("Arroz", 11.99, 2)
+    val item2 = Produto("Feijão", 12.99, 1)
+    val item3 = Produto("Macarrão", 13.99, 2)
+    val item4 = Produto("Óleo", 14.99, 3)
+    val item5 = Produto("Açúcar", 15.99, 1)
+
+    caixa.cadastrarProdutos(item1)
+    caixa.cadastrarProdutos(item2)
+    caixa.cadastrarProdutos(item3)
+    caixa.cadastrarProdutos(item4)
+    caixa.cadastrarProdutos(item5)
 
     println("---------MENU--------")
     println("1 - Cadastrar Produtos")
@@ -43,7 +49,7 @@ fun main() {
                 }
                 3 -> {
                     val valorTotal = caixa.somaDeTodosOsValores()
-                    println("Valor total a pagar: R$ $valorTotal")
+                    println("Valor total a pagar: R$ %.2f".format(valorTotal))
                 }
                 4 -> {
                     continuar = false

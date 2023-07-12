@@ -30,10 +30,6 @@ class Pessoa {
         anoNascimento = ano
     }
 
-    fun obterIdade(): Int {
-        return idade
-    }
-
     fun getDiaNascimento(): Int {
         return diaNascimento
     }
