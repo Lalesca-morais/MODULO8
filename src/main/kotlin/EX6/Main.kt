@@ -5,25 +5,6 @@ fun main() {
     val contaPoupanca = ContaPoupanca()
     val contaCorrente = ContaCorrente()
 
-//    println("Conta Salário:")
-//    contaSalario.deposito(1200.0, true)
-//    contaSalario.deposito(500.0)
-//    contaSalario.saque(1500.0)
-//    contaSalario.saque(100.0)
-//
-//    println("------------------------")
-//
-//    println("Conta Poupança:")
-//    contaPoupanca.deposito(1000.0, true)
-//    contaPoupanca.saque(500.0)
-//    contaPoupanca.saque(1500.0)
-//
-//    println("------------------------")
-//
-//    println("Conta Corrente:")
-//    contaCorrente.deposito(2000.0, true)
-//    contaCorrente.saque(1000.0)
-//    contaCorrente.saque(3000.0)
     println("=====MENU=====")
     println("1 - Criar conta corrente")
     println("2 - Criar conta poupança")
