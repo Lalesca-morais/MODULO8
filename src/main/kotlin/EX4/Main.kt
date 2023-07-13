@@ -40,7 +40,7 @@ fun main() {
                         println("Digite a data de admissão do funcionário $i (formato: AAAA-MM-DD):")
                         val admissao = readln()
 
-                        val novoFuncionario = RecursosHumanos(nomeCompleto.orEmpty(), setorFuncionario.orEmpty(), salarioFuncionario, admissao)
+                        val novoFuncionario = RecursosHumanos(nomeCompleto, setorFuncionario, salarioFuncionario, admissao)
                         listaFuncionario.add(novoFuncionario)
                         println("-------------------------------------------------")
                     }
