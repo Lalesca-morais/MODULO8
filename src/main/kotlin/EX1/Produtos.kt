@@ -1,18 +1,36 @@
 package EX1
 
-import java.time.LocalDate
-open class Produtos(val nome: String, val codigoDeBarras: String, val dataValidade: LocalDate) {
-    open fun detalhesDoProduto() {
+abstract class Produto(val codigoDeBarras: String, val nome: String, val preco: Double) {
+    open fun mostrarDetalhesDoItem() {
         println("Nome: $nome")
         println("Código de barras: $codigoDeBarras")
-        println("Data de validade: $dataValidade")
+        println("Preço: $preco")
+    }
+    open fun equals(outroValor: Produto?): Boolean {
+        if (this === outroValor){
+            return true
+        }else if (outroValor !is Produto) {
+            return false
+        }
+        return codigoDeBarras == outroValor.codigoDeBarras
     }
 }
-class ValidacaoDoProduto(nome: String, codigoDeBarras: String, dataDeValidade: LocalDate) : Produtos(nome, codigoDeBarras, dataDeValidade) {
-    override fun detalhesDoProduto() {
-        super.detalhesDoProduto()
-        println("Data de Validade: $dataValidade")
+class Livros(codigoBarras: String, nome: String, preco: Double, val autor: String): Produto(codigoBarras, nome, preco) {
+    override fun mostrarDetalhesDoItem() {
+        super.mostrarDetalhesDoItem()
+        println("Autor: $autor")
     }
 }
-
+class CDs(codigoBarras: String, nome: String, preco: Double, val numeroFaixas: Int): Produto(codigoBarras, nome, preco){
+    override fun mostrarDetalhesDoItem() {
+        super.mostrarDetalhesDoItem()
+        println("Número de faixas: $numeroFaixas")
+    }
+}
+class DVDs(codigoBarras: String, nome: String, preco: Double, val duracao: Int) : Produto(codigoBarras, nome, preco) {
+    override fun mostrarDetalhesDoItem() {
+        super.mostrarDetalhesDoItem()
+        println("Duração: $duracao minutos")
+    }
+}
 

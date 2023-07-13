@@ -1,9 +1,30 @@
 package EX2
 
-open class Livro(val genero: String, val nomeDoLivro: String, val autorDoLivro: String) {
-    open fun detalhesDoProduto() {
-        println("Nome do livro: $nomeDoLivro")
-        println("Gênero: $genero")
-        println("Autor(a) do livro: $autorDoLivro")
+import kotlin.math.PI
+abstract class Forma(var lado: Int, var altura:Int) {
+    abstract fun calcularArea():Float
+    abstract fun calcularPerimetro():Float
+}
+abstract class Retangulo(val lado: Float, val altura: Float) : Forma() {
+    override fun calcularArea(): Float {
+        return lado * altura
     }
+    override fun calcularPerimetro(): Float {
+        return 2 * (lado + altura)
+    }
+}
+class Circulo(val raio: Float) : Forma() {
+    override fun calcularArea(): Float {
+        return PI.toFloat() * raio * raio
+    }
+    override fun calcularPerimetro(): Float {
+        return 2 * PI.toFloat() * raio
+    }
+}
+class Quadrado(val raio: Float) : Retangulo(lado, altura) {
+
+}
+fun main(){
+    var formas = arrayOf(5)
+
 }

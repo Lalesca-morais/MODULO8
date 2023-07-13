@@ -1,47 +1,37 @@
 package EX1
 
-import java.lang.Exception
-import java.time.LocalDate
 fun main() {
-    val produto1 = ValidacaoDoProduto("Arroz", "7891234567890", LocalDate.of(2023, 12, 31))
-    val produto2 = Produtos("Feijão", "9876543210987", LocalDate.of(2023,7,12))
+    val produtos = arrayOf(
+        Livros("123456", "Livro A", 29.99, "Autor A"),
+        CDs("234567", "CD B", 19.99, 12),
+        DVDs("345678", "DVD C", 39.99, 120),
+        Livros("1234512", "Livro B", 39.90, "Autor B"),
+        CDs("876547", "CD C", 15.99, 12)
+    )
 
-    val listaDeProdutos = mutableListOf<Produtos>(produto1, produto2)
-
-    println("Produtos cadastrados:")
-    for (produto in listaDeProdutos) {
-        produto.detalhesDoProduto()
+    for (produto in produtos) {
+        println("Produto: ")
+        produto.mostrarDetalhesDoItem()
         println("------------------------")
     }
-    println("Digite quantos produtos deseja cadastrar: ")
-    val qtProdutos = readln().toIntOrNull() ?:0
+    val produtoBuscadoErrado = Livros("876543", "Livro E", 0.99, "Autor K")
+    buscarProduto(produtoBuscadoErrado, produtos)
 
-    for (i in 1..qtProdutos){
-        println("Para cadastrar digite o nome do produto $i:")
-        val nome = readln() ?: ""
+    val produtoBuscadoCerto = DVDs("345678", "DVD C", 39.99, 120)
+    buscarProduto(produtoBuscadoCerto, produtos)
+}
+private fun buscarProduto(produto: Produto, produtos: Array<Produto>) {
+    val posicao = produtos.indexOf(produto)
 
-        println("Digite o código de barras do produto $i: ")
-        val codigoDeBarras = readln() ?: ""
-
-        println("Digite a data de validade do produto $i (formato: AAAA-MM-DD): ")
-        val novaDataDeValidade = readln() ?: ""
-
-        val dataDeValidade = try {
-            LocalDate.parse(novaDataDeValidade)
-        }catch (e: Exception){
-            LocalDate.now()
-        }
-        val produto = Produtos(nome, codigoDeBarras, dataDeValidade)
-        listaDeProdutos.add(produto)
-        println("-------------------------------------------------")
-    }
-    println("Produtos cadastrados: ")
-    for (produto in listaDeProdutos) {
-        println("Nome: ${produto.nome}")
-        println("Código de barras: ${produto.codigoDeBarras}")
-        println("Data de validade: ${produto.dataValidade}")
-        println("-------------------------------------------")
+    if (posicao != -1) {
+        println("O produto ${produto.nome} está na posição $posicao do vetor.")
+    } else {
+        println("O produto ${produto.nome} não foi encontrado.")
     }
 }
+
+
+
+
 
 
