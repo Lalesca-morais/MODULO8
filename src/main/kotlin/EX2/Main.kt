@@ -20,16 +20,16 @@ fun main() {
     println("1 - Cadastrar um livro")
     println("2 - Listar livros cadastrados")
     println("3 - Sair")
-    val opcao = readLine()?.toInt()
+    val opcao = readln().toInt()
 
     when (opcao) {
         1 -> {
             while (continuar) {
                 println("Digite quantos livros deseja cadastrar: ")
-                val qtLivros = readLine()?.toIntOrNull() ?: 0
+                val qtLivros = readln()?.toInt()
 
                 if (qtLivros != 0) {
-                    for (i in 1..qtLivros) {
+                    for (i in 1..qtLivros!!) {
                         println("Para cadastrar digite o gênero do livro $i:")
                         val generoLivro = readLine()
 
@@ -39,8 +39,8 @@ fun main() {
                         println("Digite o autor(a) do livro $i:")
                         val autorLivro = readLine()
 
-                       // val novoLivro = Livro(generoLivro, nomeLivro, autorLivro)
-                        // livros.add(novoLivro)
+                        val novoLivro = Livro(generoLivro, nomeLivro, autorLivro)
+                         livros.add(novoLivro)
                         println("-------------------------------------------------")
                     }
                 } else println("Digite um número válido!")

@@ -11,7 +11,7 @@ fun main() {
     println("3 - Criar conta salário")
     println("4 - Sair")
     println("Escolha a opção desejada!")
-    val opcao = readln()?.toInt()
+    val opcao = readln().toInt()
 
     val titularContaCorrente = mutableListOf<String>()
     val titularContaPoupanca = mutableListOf<String>()

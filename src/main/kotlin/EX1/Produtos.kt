@@ -8,8 +8,7 @@ open class Produtos(val nome: String, val codigoDeBarras: String, val dataValida
         println("Data de validade: $dataValidade")
     }
 }
-class ValidacaoDoProduto(nome: String, codigoDeBarras: String, dataDeValidade: LocalDate) :
-    Produtos(nome, codigoDeBarras, dataDeValidade) {
+class ValidacaoDoProduto(nome: String, codigoDeBarras: String, dataDeValidade: LocalDate) : Produtos(nome, codigoDeBarras, dataDeValidade) {
     override fun detalhesDoProduto() {
         super.detalhesDoProduto()
         println("Data de Validade: $dataValidade")

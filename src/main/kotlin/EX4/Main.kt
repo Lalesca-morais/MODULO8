@@ -18,13 +18,13 @@ fun main() {
     println("1 - Cadastrar um funcionário")
     println("2 - Listar funcionários cadastrados")
     println("3 - Sair")
-    val opcao = readln()?.toInt()
+    val opcao = readln().toInt()
 
     when (opcao) {
         1 -> {
             while (continuar) {
                 println("Digite quantos funcionários deseja cadastrar: ")
-                val qtFuncionarios = readLine()?.toIntOrNull() ?: 0
+                val qtFuncionarios = readln().toIntOrNull() ?: 0
 
                 if (qtFuncionarios != 0) {
                     for (i in 1..qtFuncionarios) {
@@ -35,7 +35,7 @@ fun main() {
                         val setorFuncionario = readln()
 
                         println("Digite o salário do funcionário $i:")
-                        val salarioFuncionario = readln()?.toDoubleOrNull() ?: 0.0
+                        val salarioFuncionario = readln().toDoubleOrNull() ?: 0.0
 
                         println("Digite a data de admissão do funcionário $i (formato: AAAA-MM-DD):")
                         val admissao = readln()
