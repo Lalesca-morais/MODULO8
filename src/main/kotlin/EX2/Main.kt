@@ -11,6 +11,7 @@ fun main() {
     formas.add(circulo)
     formas.add(quadrado)
 
+
     for (i in 0 until formas.size) {
         val forma = formas[i]
         println("Área: ${forma.calcularArea()}")

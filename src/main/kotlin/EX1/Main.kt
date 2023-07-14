@@ -10,7 +10,7 @@ fun main() {
     for (produto in produtosDaLoja) {
         println("Produto: ")
         produto.mostrarDetalhesDoItem()
-        println("------------------------")
+        println()
     }
     val produto1 = produtosDaLoja[0]
     val produto2 = produtosDaLoja[1]
