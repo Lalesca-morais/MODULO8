@@ -1,26 +1,32 @@
 package EX2
 
 import kotlin.math.PI
-abstract class Forma(var lado: Int, var altura: Int) {
-    abstract fun calcularArea(): Float
-    abstract fun calcularPerimetro(): Float
+abstract class Forma {
+    abstract fun calcularArea(): String
+    abstract fun calcularPerimetro(): String
 }
-open class Retangulo(val lado: Float, val altura: Float) : Forma(lado.toInt(), altura.toInt()) {
-    override fun calcularArea(): Float {
-        return lado * altura
+class Retangulo (val lado:Float,val altura:Float): Forma() {
+    override fun calcularArea(): String {
+        return "Área do Retangulo - %.2f".format(lado*altura)
+    }
+    override fun calcularPerimetro(): String {
+        return "Perimetro do Retangulo - %.2f".format(2*(lado+altura))
+    }
+}
+class Circulo(val raio: Float) : Forma() {
+    override fun calcularArea(): String {
+        return "Área do Círculo - %.2f".format(PI.toFloat() * raio * raio)
+    }
+    override fun calcularPerimetro(): String {
+        return "Perímetro do Circulo - %.2f".format(2 * PI.toFloat() * raio)
+    }
+}
+class Quadrado (val lado:Float,val altura:Float): Forma() {
+    override fun calcularArea(): String {
+        return "Área do quadrado - %.2f".format(lado * altura)
     }
 
-    override fun calcularPerimetro(): Float {
-        return 2 * (lado + altura)
+    override fun calcularPerimetro(): String {
+        return "Perimetro do quadrado - %.2f".format(2 * (lado + altura))
     }
 }
-class Circulo(val raio: Float) : Forma(0, 0) {
-    override fun calcularArea(): Float {
-        return PI.toFloat() * raio * raio
-    }
-
-    override fun calcularPerimetro(): Float {
-        return 2 * PI.toFloat() * raio
-    }
-}
-class Quadrado(lado: Float) : Retangulo(lado, altura) {}

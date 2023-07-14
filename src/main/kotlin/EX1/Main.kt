@@ -16,7 +16,7 @@ fun main() {
     val produto2 = produtosDaLoja[1]
     val produto3 = produtosDaLoja[2]
 
-    println(produto1 == produto2)
+    println(produto1 == produto1)
     println(produto1 == produto3)
 }
 

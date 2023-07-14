@@ -1,7 +1,7 @@
 package EX1
 
 abstract class Produto(val codigoDeBarras: String, val nome: String, val preco: Double) {
-     fun mostrarDetalhesDoItem() {
+     open fun mostrarDetalhesDoItem() {
         println("Nome: $nome")
         println("Código de barras: $codigoDeBarras")
         println("Preço: $preco")
@@ -9,7 +9,6 @@ abstract class Produto(val codigoDeBarras: String, val nome: String, val preco: 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (other !is Produto) return false
-
         return codigoDeBarras == other.codigoDeBarras
     }
 }

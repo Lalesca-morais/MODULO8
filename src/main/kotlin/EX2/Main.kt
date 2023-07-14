@@ -5,7 +5,7 @@ fun main() {
 
     val retangulo = Retangulo(4f, 2f)
     val circulo = Circulo(3f)
-    val quadrado = Quadrado(7f)
+    val quadrado = Quadrado(7f,6f)
 
     formas.add(retangulo)
     formas.add(circulo)
