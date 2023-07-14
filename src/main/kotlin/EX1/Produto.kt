@@ -12,16 +12,19 @@ abstract class Produto(val codigoDeBarras: String, val nome: String, val preco: 
         return codigoDeBarras == other.codigoDeBarras
     }
 }
+
 class Livros(codigoBarras: String, nome: String, preco: Double, val autor: String): Produto(codigoBarras, nome, preco) {
     override fun mostrarDetalhesDoItem() {
         println("Autor: $autor")
     }
 }
+
 class CDs(codigoBarras: String, nome: String, preco: Double, val numeroFaixas: Int): Produto(codigoBarras, nome, preco){
     override fun mostrarDetalhesDoItem() {
         println("Número de faixas: $numeroFaixas")
     }
 }
+
 class DVDs(codigoBarras: String, nome: String, preco: Double, val duracao: Int) : Produto(codigoBarras, nome, preco) {
     override fun mostrarDetalhesDoItem() {
         println("Duração: $duracao minutos")

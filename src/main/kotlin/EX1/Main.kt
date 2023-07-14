@@ -13,6 +13,7 @@ fun main() {
         println()
     }
 
+
     val produto1 = produtosDaLoja[0]
     val produto2 = produtosDaLoja[1]
     val produto3 = produtosDaLoja[2]
