@@ -1,6 +1,5 @@
 package EX1
 
-
 abstract class Produto(val codigoDeBarras: String, val nome: String, val preco: Double) {
      open fun mostrarDetalhesDoItem() {
         println("Nome: $nome")
