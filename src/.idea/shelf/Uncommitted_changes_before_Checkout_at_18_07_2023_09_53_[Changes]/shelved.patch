@@ -1,0 +1,16 @@
+Index: main/kotlin/EX2/Livro.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package EX2\r\n\r\nopen class Livro(val genero: String, val nomeDoLivro: String, val autorDoLivro: String) {\r\n    open fun detalhesDoProduto() {\r\n        println(\"Nome do livro: $nomeDoLivro\")\r\n        println(\"Gênero: $genero\")\r\n        println(\"Autor(a) do livro: $autorDoLivro\")\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/main/kotlin/EX2/Livro.kt b/main/kotlin/EX2/Livro.kt
+--- a/main/kotlin/EX2/Livro.kt	
++++ b/main/kotlin/EX2/Livro.kt	
+@@ -1,6 +1,6 @@
+ package EX2
+ 
+-open class Livro(val genero: String, val nomeDoLivro: String, val autorDoLivro: String) {
++open class Livro(var genero: String?, var nomeDoLivro: String?, var autorDoLivro: String?) {
+     open fun detalhesDoProduto() {
+         println("Nome do livro: $nomeDoLivro")
+         println("Gênero: $genero")
