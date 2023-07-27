@@ -1,8 +1,7 @@
 package EX1
 
 
-class MaiorNumero {
-
+class MenorNumero {
     fun encontrarMaisBarato(valor1: Double?, valor2: Double?, valor3: Double?, valor4: Double?, valor5: Double?): String {
 
         if (valor1 != null && valor2 != null && valor3 != null && valor4 != null && valor5 != null) {

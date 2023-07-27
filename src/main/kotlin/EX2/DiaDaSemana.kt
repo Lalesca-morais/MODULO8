@@ -1,9 +1,7 @@
 package EX2
 
 class DiaDaSemana {
-
     fun mostrarDiaDaSemana(dia: Int?): String {
-
         val diaDaSemana = when (dia) {
             1 -> "Domingo"
             2 -> "Segunda-feira"

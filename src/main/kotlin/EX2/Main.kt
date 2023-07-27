@@ -7,4 +7,5 @@ fun main() {
     val numero = readln().toIntOrNull()
 
     diaDaSemana.mostrarDiaDaSemana(numero)
+
 }

@@ -21,4 +21,5 @@ class MaiorNumeroTest {
         val resultado = maiorNumero.encontrarMaiorNumero(null, -9.0, -8.5, -1.0, -4.9)
         assertEquals("O maior numero é 0.0", resultado)
     }
+
 }

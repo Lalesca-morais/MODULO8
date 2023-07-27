@@ -13,7 +13,6 @@ fun main() {
         val produtoMaisBarato = produtoMaisBarato(valor1, valor2, valor3)
         println("O $produtoMaisBarato é o mais barato!")
 }
-
 fun produtoMaisBarato(valor1: Double?, valor2: Double?, valor3: Double?): String {
         if (valor1 != null && valor2 != null && valor3 != null) {
                 return when {
