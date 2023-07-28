@@ -2,10 +2,8 @@ package EX1
 
 import java.util.*
 
-
 class Estoque {
     companion object {
-
         private val estoque = mutableMapOf<String, Int>()
 
         init {

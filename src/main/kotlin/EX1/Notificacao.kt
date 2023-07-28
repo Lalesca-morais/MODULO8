@@ -2,23 +2,9 @@ package EX1
 
 import EX1.ClassePedidos.Companion.formatarValor
 
-
 class Cliente(val nome: String, val email: String)
 class Notificacao {
     companion object {
-
-//        fun produtosConcluidos() {
-//            val statusPedidosConcluidos = obterStatusPedidosConcluidos()
-//
-//            for (pedido in statusPedidosConcluidos.keys) {
-//
-//                val status = statusPedidosConcluidos[pedido]
-//
-//                if (status == EX1.StatusDoPedido.CONCLUIDO) {
-//                    enviarStatusDoPedido(pedido, "Seu pedido está a caminho!\nTempo estimado de entrega: 30 minutos.")
-//                }
-//            }
-//        }
 
         fun obterStatusPedidosConcluidos(): Map<String, StatusDoPedido> {
             return mapOf(
